@@ -68,7 +68,7 @@ p {
 .content {
   margin: 30px;
 }
-. .btn-branding {
+.btn-branding {
   background: var(--branding-color);
   border-radius: 4px;
   color: #f9f7fe;
