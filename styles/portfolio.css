@@ -25,6 +25,10 @@ h1 {
 h2 {
   font-size: 64px;
 }
+
+h4 {
+  font-size: 48px;
+}
 p {
   font-weight: normal;
   font-size: 16px;
@@ -133,13 +137,22 @@ footer .social-links a {
   background: var(--secondary-color);
   color: var(--branding-color);
   padding: 10px 14px;
-  font-size: 18px;
+  font-size: 24px;
   border-radius: 50%;
-  transition: all 150ms ease-in-out;
+  transition: all 100ms ease-in-out;
 }
 footer .social-links a:hover {
   color: #f9f7fe;
   background: var(--branding-color);
+}
+
+footer .contact-box {
+  background: var(--secondary-color);
+  padding: 30px 120px;
+  border-radius: 10px;
+}
+footer .contact-box p {
+  margin: 0;
 }
 @media (max-width: 960px) {
   h1 {
@@ -151,7 +164,9 @@ footer .social-links a:hover {
   .hero {
     padding: 60px 20px;
   }
-
+  h4 {
+    font-size: 18px;
+  }
   .project-description {
     padding: 0;
     text-align: center;
