@@ -12,20 +12,22 @@ const Navbar = () => {
       <nav className="flex justify-between items-center py-5">
         <Link href="/" title="Homepage">
           <img
-            src="/logo.png"
+            src="images/logo.png"
             className="max-w-36 block"
             alt="Anna Vediashkyna logo"
           />
         </Link>
-        <ul className="flex flex-row gap-8">
+        <div className="flex flex-row gap-8">
           {
             menu.map(item => (
-              <li key={item.id}>
-                <NavLink to={item.url}  className={'transition-all text-black hover:text-indigo-500'} >{item.title}</NavLink>
-              </li>
+                <NavLink 
+                  key={item.id}
+                  to={item.url}
+                  className={`transition-all hover:text-indigo-500 menu-item`}
+                >{item.title}</NavLink>
             ))
           }
-        </ul>
+        </div>
       </nav>
   )
 }

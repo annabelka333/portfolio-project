@@ -1,23 +1,20 @@
-import { Link } from "react-router";
 import PropTypes from "prop-types";
 
 
 const CardProject = ({title, description, image}) => {
   return(
-    <div className="row">
-        <div className="col">
-          <div className="project-description">
-            <h2 className="mb-5">{title}</h2>
-            <p className="mb-5 text-muted">
-              {description}
-            </p>
-            <Link href="/projects" className="btn btn-branding-outline"
-              >Learn more
-            </Link>
-          </div>
+    <div className={`flex even:flex-row-reverse odd:flex-row`}>
+        <div className="w-1/2 p-16 box-border">
+          <h2 className="mb-8">{title}</h2>
+          <p className="mb-12 text-neutral-700">
+            {description}
+          </p>
+          <a href="https://google.com" title={`Visit a ${title}`} target="_blank" className="link">
+            Learn more
+          </a>
         </div>
-        <div className="col d-none d-lg-block">
-          <img src={image} className="img-fluid" alt={title} />
+        <div className="w-1/2 rounded-md overflow-hidden">
+          <img src={image} className="w-full" alt={title} />
         </div>
       </div>
   )
