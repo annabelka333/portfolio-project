@@ -17,7 +17,8 @@ const socialLinks = [
     url: "https://www.facebook.com/anna.vediashkyna",
     icon: <FacebookSvg />,
   },
-  { id: 3, url: "https://www.github.com/vediashkyna", icon: <GitHubSvg /> },
+  { id: 3, url: "https://www.github.com/vediashkyna", 
+    icon: <GitHubSvg /> },
   {
     id: 4,
     url: "https://www.instagram.com/vediashkyna",
