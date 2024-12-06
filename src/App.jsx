@@ -1,21 +1,39 @@
-import Navbar from '../components/navbar/navbar'
+import { createBrowserRouter, RouterProvider } from 'react-router';
+import MainLayout from './layout/main-layout';
+import Home from './views/home';
+
+
+const router = createBrowserRouter([
+  { path: "/", 
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <div>About</div>,
+      },
+      {
+        path: "projects",
+        element: <div>Projects</div>,
+      },
+      {
+        path: "contact",
+        element: <div>Contact</div>,
+      },{
+        path: '*',
+        element: <div>Main</div>
+      }
+    ]
+  },
+]);
 
 function App() {
 
   return (
-    <>
-      <div>
-        <Navbar/>
-        <button className='odd:bg-violet-900 even:bg-fuchsia-800 text-violet-50 hover:shadow-md transition-all '>Button</button>
-        <button className='odd:bg-violet-900 even:bg-fuchsia-800 text-violet-50 hover:shadow-md transition-all '>Button</button>
-        <button className='odd:bg-violet-900 even:bg-fuchsia-800 text-violet-50 hover:shadow-md transition-all '>Button</button>
-
-      </div>
-      
-        
-    
-      
-    </>
+    <RouterProvider router={router} />
   )
 }
 
