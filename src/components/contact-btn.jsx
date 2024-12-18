@@ -1,8 +1,10 @@
 import { Link } from "react-router";
 
+
 const ContactBtn = () => {
+  
   return (
-    <div>
+    <div className="space-y-4">
       <Link
         href="/contact"
         className="inline-block rounded-md py-4 px-8 text-xl font-bold bg-indigo-500 text-indigo-50"
@@ -10,6 +12,7 @@ const ContactBtn = () => {
       >
         Contact me
       </Link>
+      
     </div>
   );
 };

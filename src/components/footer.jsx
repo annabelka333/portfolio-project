@@ -1,10 +1,12 @@
 import ContactBtn from "./contact-btn";
+
 import {
   FacebookSvg,
   GitHubSvg,
   InstagramSvg,
   LinkedInSvg,
 } from "./icons/icons";
+
 
 const socialLinks = [
   {
